@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+    <title>BitMonkey Coders</title>
+</head>
+<body class="bg-dark">
+    <header>
+        <div id="cookiesCondition" class="w-100 d-flex gap-2 justify-content-center align-items-center">
+            <p>BitMonky Uses Tracking Cookies for session managment... To Agree And Continue Click</p>
+                <div class="d-flex gap-2">
+                    <button id="accept" type="button">Accept</button>
+                    <p>If not</p>
+                    <button id="leaveSite" type="button">Leave Site</button>
+                </div>
+        </div>
+        <div id="mainHeader" class="d-flex bg-dark justify-content-between w-100 bg-danger p-2">
+            <div id="mainHeaderLeft" class="d-flex justify-content-center align-items-center">
+                <img src="https://image.bitmonky.com/img/bitGoldCoin.webp" width="80" height="80" alt="bitmonkey picture">
+                <div id="mainHeaderLeftInfo">
+                    <h2><span>Bit</span><span>Monkey</span></h2>
+                    <a href="https://www.bitmonky.com/">The POWAPAY Economy</a>
+                    <!-- <p>We Accept Dogecoin</p> -->
+                </div>
+            </div>
+            <div id="mainHeaderRight" class=" d-flex justify-content-center align-items-center">
+                <div id="btn-holders">
+                    <button id="signup" type="button">Sign Up</button>
+                    <button id="signin" type="button">Sign In</button>
+                    <div id="loginSection">
+                        <i id="closeSignin">X</i>
+                        <label for="email">
+                            <input type="email" name="email" id="email" placeholder="Email">
+                        </label>
+                        <div id="pwdHolder">
+                            <label for="pwd">
+                                <input type="password" name="password" id="pwd" placeholder="password">
+                            </label>
+                            <a id="forgotPwd" href="#">Forgot your password?</a>
+                        </div>
+                        <button type="button" id="login">Login</button>
+                        <button type="button" id="loginGoogle"><svg role="img" height="24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48"><defs><path id="a" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"></path></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"></use></clipPath><path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z"></path><path clip-path="url(#b)" fill="#EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z"></path><path clip-path="url(#b)" fill="#34A853" d="M0 37l30-23 7.9 1L48 0v48H0z"></path><path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z"></path></svg>oogle</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <aside>
+            <button id="exploreBtn" type="button">Explore ></button>
+            <button id="profile" type="button">Profile ></button>
+            <div id="profileField">
+                <div id="profileTop">
+                    <div>
+                        <img alt="BitMonky Chat - More Channels Icon" src="https://image.bitmonky.com/img/gearOrange.png">
+                        <a href="#">Return to</a>
+                    </div>
+                    <a href="#">Lounge</a>
+                    <a href="#">Chat</a>
+                </div>
+                <div id="profileMid">
+                    <div id="profileInfo">
+                        <span>Topic  - Lounge II</span>
+                        <p>Source: A Channel Started By - <span>Peter</span></p>
+                    </div>
+                    <img alt="Peter" src="https://image.bitmonky.com/getMbrImg.php?id=17621">
+                </div>
+                <textarea id="textField" placeholder="...Right click on memeber photos to call them" cols="30" rows="10">
+                </textarea>
+                <div id="profileBtns">
+                    <button id="profileSendBtn" type="button">Send</button>
+                    <button id="profileShareBtn" type="button">Share Photo</button>
+                    <span>Language: all</span>
+                </div>
+            </div>
+        </aside>
+        <section>
+            <div id="profileHeader">
+
+            </div>
+        </section>
+    </main>
+    
+    <span id="chatholder">
+        <a id="chatLink" href="#">Guerrilla Coders Inc</a>
+        <img id="chatPhoto" src="https://image.bitmonky.com/getMbrImg.php?rfi=https%3A%2F%2Fwww.bitmonky.com%2F&amp;rpg=https%3A%2F%2Fwww.bitmonky.com%2Fwhzon%2FwzApp.php%3Ffnrl%3D%252Fwhzon%252Fmbr%252FmbrProfile.php%253FwzID%253D0%2526fwzUserID%253D951054&amp;zone=-210&amp;mid=0e6edb9048a21b1e3964fe60823675b9&amp;hut=0e6edb9048a21b1e3964fe60823675b9" alt="Ai chat">
+    </span>
+    <script src="script.js"></script>
+</body>
+</html>
