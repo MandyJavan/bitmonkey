@@ -165,10 +165,10 @@ main {
     margin: 20px 2%;
     width: 95%;
     height: 100vh;
-    gap: 8px;
 }
 aside {
     width: 120px;
+    /* width: 480px; */
     height: 100%;
     background-color: rgb(83, 83, 83);
     display: flex;
@@ -191,6 +191,7 @@ aside button:hover {
 
 #profileField {
     display: none;
+    /* display: flex; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -217,7 +218,123 @@ aside button:hover {
 #profileTop a {
     text-decoration: none;
     font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: #20B2AA;
+    padding: 2px 4px;
+    border-radius: 4px;
 }
+
+#profileTop div a{
+    background-color: transparent;
+    color: #20B2AA;
+    cursor: auto;
+}
+#profileTop div img {
+    cursor: pointer;
+}
+
+#profileTopImgHidden {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid gray;
+    padding: 20px 10px;
+    border-radius: 4px;
+    left: 60px;
+    box-shadow: 0 0 10px;
+    background-color: #444444;
+    width: 400px;
+}
+
+#img3:hover #profileTopImgHidden {
+    display: flex;
+}
+
+#profileTopImgHiddenTop {
+    display: flex;
+    gap: 4px;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+}
+
+#profileTopImgHiddenTop input {
+    width: 15px;
+}
+#profileTopImgHiddenTop label {
+    font-size: 14px;
+    color: #FEFEFE;
+}
+#profileTopImgHidden h6 {
+    color: #FEFEFE;
+    width: 100%;
+    margin-top: 15px;
+}
+
+#columnContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+}
+#columnContainer span {
+    color: #FEFEFE;
+    font-size: 11px;
+}
+#userInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 4px;
+}
+#userInfo:hover {
+    background-color: #00774d;
+}
+#userInfoLeft img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+#userInfo div a {
+    cursor: pointer;
+    color: #74A02A;
+}
+#userInfo div a:hover {
+    color: red;
+}
+
+#userInfoLeft span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #FEFEFE;
+}
+#userInfo div + span{
+    color: #FEFEFE;
+    font-size: 12px;
+}
+#profileTopBottom {
+    width: 100%;
+}
+
+#profileTopBottom span {
+    color: #FEFEFE;
+    cursor: pointer;
+}
+#profileTopBottom span:hover {
+    color: red;
+}
+#profileTopBottom span:first-child:after {
+    content: " |";
+    color: white;
+}
+
 
 #profileMid {
     width: 100%;

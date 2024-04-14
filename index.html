@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="style.css">
-    <title>BitMonkey Coders</title>
+    <title>BitMonky Coders</title>
 </head>
 <body class="bg-dark">
     <header>
@@ -15,7 +15,7 @@
             <p>BitMonky Uses Tracking Cookies for session managment... To Agree And Continue Click</p>
                 <div class="d-flex gap-2">
                     <button id="accept" type="button">Accept</button>
-                    <p>If not</p>
+                    <p id="ifNot">If not</p>
                     <button id="leaveSite" type="button">Leave Site</button>
                 </div>
         </div>
@@ -23,7 +23,7 @@
             <div id="mainHeaderLeft" class="d-flex justify-content-center align-items-center">
                 <img src="https://image.bitmonky.com/img/bitGoldCoin.webp" width="80" height="80" alt="bitmonkey picture">
                 <div id="mainHeaderLeftInfo">
-                    <h2><span>Bit</span><span>Monkey</span></h2>
+                    <h2><span>Bit</span><span>Monky</span></h2>
                     <a href="https://www.bitmonky.com/">The POWAPAY Economy</a>
                     <!-- <p>We Accept Dogecoin</p> -->
                 </div>
@@ -57,7 +57,32 @@
             <div id="profileField">
                 <div id="profileTop">
                     <div>
-                        <img alt="BitMonky Chat - More Channels Icon" src="https://image.bitmonky.com/img/gearOrange.png">
+                        <img id="img3" alt="BitMonky Chat - More Channels Icon" src="https://image.bitmonky.com/img/gearOrange.png">
+                        <div id="profileTopImgHidden">
+                                <div id="profileTopImgHiddenTop">
+                                    <input placeholder="My History Only" type="checkbox" name="historyCheck" id="historyCheck">
+                                    <label for="historyCheck">My History Only</label>
+                                    <img id="profileTopImgHiddenTopImg" alt="BitMonky Chat - More Channels Icon" src="https://image.bitmonky.com/img/gearOrange.png">
+                                </div>
+                                <h6>MonkyTalk Channels</h6>
+                                <div  id="columnContainer">
+                                    <span>Channel Name</span>
+                                    <span>Total Posts: Online</span>
+                                </div>
+                                <div id="userInfo">
+                                    <div id="userInfoLeft">
+                                        <img src="https://image.bitmonky.com/getMbrImg.php?id=17621" alt="User profile">
+                                        <a href="#">Username</a>
+                                        <span>Multilingual</span>
+                                    </div>
+                                    <span>7891695</span>
+                                </div>
+                                <div id="profileTopBottom">
+                                    <span>Next </span>
+                                    <span> Top</span>
+                                </div>
+                            
+                        </div>
                         <a href="#">Return to</a>
                     </div>
                     <a href="#">Lounge</a>

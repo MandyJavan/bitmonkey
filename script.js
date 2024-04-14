@@ -14,11 +14,16 @@ let chatLink = document.querySelector("#chatLink")
 let chatPhoto = document.querySelector("#chatholder")
 let chatPhoto_hover = false;
 let profileField = document.querySelector("#profileField")
+let ifNot = document.querySelector("#ifNot")
+let img3 = document.querySelector("#img3")
+let profileTopImgHidden = document.querySelector("#profileTopImgHidden")
+let profileTopImgHidden_isHover = false;
 
 
 accept.addEventListener("click", ()=> {
     cookiesCondition.classList.toggle("bg-success")
     cookiesCondition.firstElementChild.textContent = "Thank you for accepting our policies!"
+    ifNot.textContent = ""
     cookiesCondition.firstElementChild.style.color = "white"
     accept.style.display = "none"
     leaveSite.style.display = "none"
@@ -30,6 +35,7 @@ accept.addEventListener("click", ()=> {
 leaveSite.addEventListener("click", ()=> {
     cookiesCondition.style.backgroundColor = "red"
     cookiesCondition.firstElementChild.textContent = "Hope to see you soon again!"
+    ifNot.textContent = ""
     cookiesCondition.firstElementChild.style.color = "white"
     accept.style.display = "none"
     leaveSite.style.display = "none"
@@ -76,3 +82,11 @@ chatPhoto.addEventListener("mouseout", ()=> {
     chatPhoto_hover = false;
     chatLink.style.right = "-200px"
 })
+
+// img3.addEventListener("mouseover", ()=> {
+//         profileTopImgHidden.style.display = "flex"
+// })
+// img3.addEventListener("mouseout", ()=> {
+//     profileTopImgHidden.style.display = "none"
+
+// })
