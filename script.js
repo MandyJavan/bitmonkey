@@ -14,16 +14,19 @@ let chatLink = document.querySelector("#chatLink")
 let chatPhoto = document.querySelector("#chatholder")
 let chatPhoto_hover = false;
 let profileField = document.querySelector("#profileField")
-let ifNot = document.querySelector("#ifNot")
 let img3 = document.querySelector("#img3")
-let profileTopImgHidden = document.querySelector("#profileTopImgHidden")
-let profileTopImgHidden_isHover = false;
+let profileTopHidden = document.querySelector("#profileTopHidden")
+let closeBtns = document.getElementsByClassName("closeSignin")
 
+for (let i = 0; i < closeBtns.length; i++) {
+    closeBtns[i].addEventListener("click", ()=> {
+        closeBtns[i].parentElement.style.display="none"
+    })
+}
 
 accept.addEventListener("click", ()=> {
     cookiesCondition.classList.toggle("bg-success")
     cookiesCondition.firstElementChild.textContent = "Thank you for accepting our policies!"
-    ifNot.textContent = ""
     cookiesCondition.firstElementChild.style.color = "white"
     accept.style.display = "none"
     leaveSite.style.display = "none"
@@ -35,7 +38,6 @@ accept.addEventListener("click", ()=> {
 leaveSite.addEventListener("click", ()=> {
     cookiesCondition.style.backgroundColor = "red"
     cookiesCondition.firstElementChild.textContent = "Hope to see you soon again!"
-    ifNot.textContent = ""
     cookiesCondition.firstElementChild.style.color = "white"
     accept.style.display = "none"
     leaveSite.style.display = "none"
@@ -46,27 +48,27 @@ leaveSite.addEventListener("click", ()=> {
 })
 
 signin.addEventListener("click", ()=> {
-    signin.style.display = "none"
-    signup.style.display = "none"
+    signin.style.visibility = "hidden"
+    signup.style.visibility = "hidden"
     loginSection.style.display = "flex"
     forgotPwd.style.display = "block"
 })
 
 closeSignin.addEventListener("click", ()=> {
     loginSection.style.display = "none"
-    signin.style.display = "initial"
-    signup.style.display = "initial"
+    signin.style.visibility = "initial"
+    signup.style.visibility = "initial"
 })
 
 profile.addEventListener("click", ()=> {
     profileIsOpen = !profileIsOpen
     if (profileIsOpen) {
         aside.style.width = "480px"
-        profile.textContent = "Profile v"
+        profile.textContent = "Channel v"
         profileField.style.display = "flex"
     } else {
         aside.style.width = "120px"
-        profile.textContent = "Profile >"
+        profile.textContent = "Channel >"
         profileField.style.display = "none"
     }
 })
@@ -83,10 +85,6 @@ chatPhoto.addEventListener("mouseout", ()=> {
     chatLink.style.right = "-200px"
 })
 
-// img3.addEventListener("mouseover", ()=> {
-//         profileTopImgHidden.style.display = "flex"
-// })
-// img3.addEventListener("mouseout", ()=> {
-//     profileTopImgHidden.style.display = "none"
-
-// })
+img3.addEventListener("mouseover", ()=> {
+    profileTopHidden.style.display = "flex"
+})

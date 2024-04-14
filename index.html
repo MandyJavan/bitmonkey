@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="style.css">
-    <title>BitMonky Coders</title>
+    <title>BitMonkey Coders</title>
 </head>
 <body class="bg-dark">
     <header>
@@ -15,7 +15,7 @@
             <p>BitMonky Uses Tracking Cookies for session managment... To Agree And Continue Click</p>
                 <div class="d-flex gap-2">
                     <button id="accept" type="button">Accept</button>
-                    <p id="ifNot">If not</p>
+                    <p>If not</p>
                     <button id="leaveSite" type="button">Leave Site</button>
                 </div>
         </div>
@@ -23,17 +23,21 @@
             <div id="mainHeaderLeft" class="d-flex justify-content-center align-items-center">
                 <img src="https://image.bitmonky.com/img/bitGoldCoin.webp" width="80" height="80" alt="bitmonkey picture">
                 <div id="mainHeaderLeftInfo">
-                    <h2><span>Bit</span><span>Monky</span></h2>
+                    <h2><span>Bit</span><span>Monkey</span></h2>
                     <a href="https://www.bitmonky.com/">The POWAPAY Economy</a>
                     <!-- <p>We Accept Dogecoin</p> -->
                 </div>
+            </div>
+            <div id="searchField">
+                <input type="search" name="search" placeholder="search">
+                <button type="button">Search</button>
             </div>
             <div id="mainHeaderRight" class=" d-flex justify-content-center align-items-center">
                 <div id="btn-holders">
                     <button id="signup" type="button">Sign Up</button>
                     <button id="signin" type="button">Sign In</button>
                     <div id="loginSection">
-                        <i id="closeSignin">X</i>
+                        <i id="closeSignin" class="closeSignin">X</i>
                         <label for="email">
                             <input type="email" name="email" id="email" placeholder="Email">
                         </label>
@@ -44,7 +48,7 @@
                             <a id="forgotPwd" href="#">Forgot your password?</a>
                         </div>
                         <button type="button" id="login">Login</button>
-                        <button type="button" id="loginGoogle"><svg role="img" height="24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48"><defs><path id="a" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"></path></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"></use></clipPath><path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z"></path><path clip-path="url(#b)" fill="#EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z"></path><path clip-path="url(#b)" fill="#34A853" d="M0 37l30-23 7.9 1L48 0v48H0z"></path><path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z"></path></svg>oogle</button>
+                       
                     </div>
                 </div>
             </div>
@@ -53,37 +57,42 @@
     <main>
         <aside>
             <button id="exploreBtn" type="button">Explore ></button>
-            <button id="profile" type="button">Profile ></button>
+            <button id="profile" type="button">Channel ></button>
             <div id="profileField">
                 <div id="profileTop">
                     <div>
                         <img id="img3" alt="BitMonky Chat - More Channels Icon" src="https://image.bitmonky.com/img/gearOrange.png">
-                        <div id="profileTopImgHidden">
-                                <div id="profileTopImgHiddenTop">
-                                    <input placeholder="My History Only" type="checkbox" name="historyCheck" id="historyCheck">
-                                    <label for="historyCheck">My History Only</label>
-                                    <img id="profileTopImgHiddenTopImg" alt="BitMonky Chat - More Channels Icon" src="https://image.bitmonky.com/img/gearOrange.png">
+                        <a id="returnTo" href="#">Return to</a>
+                        <div id="profileTopHidden">
+                            <i class="closeSignin">X</i>
+                            <div id="profileTopHidden-A">
+                                <div>
+                                    <label for="checkbox">
+                                        <input type="checkbox" name="checkbox" id="checkbox" title="checkbox"/>
+                                        My History Only
+                                    </label>
+                                    <img alt="BitMonky Chat - More Channels Icon" src="https://image.bitmonky.com/img/gearOrange.png">
                                 </div>
-                                <h6>MonkyTalk Channels</h6>
-                                <div  id="columnContainer">
-                                    <span>Channel Name</span>
-                                    <span>Total Posts: Online</span>
+                                
+                            </div>
+                            <h6>MonkyTalk Channels</h6>
+                            <div id="profileTopHidden-B">
+                                <span>Channel Name</span>
+                                <span>Total Posts: Online</span>
+                            </div>
+                            <div id="profileTopHidden-C">
+                                <div>
+                                    <img src="https://image.bitmonky.com/img/bitGoldCoin.webp" alt="userphoto">
+                                    <a href="#">Username </a>
+                                    <span>Multilingual</span>
                                 </div>
-                                <div id="userInfo">
-                                    <div id="userInfoLeft">
-                                        <img src="https://image.bitmonky.com/getMbrImg.php?id=17621" alt="User profile">
-                                        <a href="#">Username</a>
-                                        <span>Multilingual</span>
-                                    </div>
-                                    <span>7891695</span>
-                                </div>
-                                <div id="profileTopBottom">
-                                    <span>Next </span>
-                                    <span> Top</span>
-                                </div>
-                            
+                                <span>7591696</span>
+                            </div>
+                            <div id="profileTopHidden-D">
+                                <span>Next</span>
+                                <span>Top</span>
+                            </div>
                         </div>
-                        <a href="#">Return to</a>
                     </div>
                     <a href="#">Lounge</a>
                     <a href="#">Chat</a>

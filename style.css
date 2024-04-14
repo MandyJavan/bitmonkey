@@ -87,7 +87,7 @@ header {
 
 }
 
-#btn-holders button:hover {
+#btn-holders button:hover, #searchField button:hover {
     background-color: rgba(238, 238, 238, 0.4);
     color: white;
 }
@@ -116,7 +116,7 @@ header {
     color: rgb(187, 187, 187);
 }
 
-#closeSignin {
+.closeSignin {
     color: black;
     font-weight: bold;
     margin: 0;
@@ -130,9 +130,17 @@ header {
     cursor: pointer;
     transition: 0.2s ease;
 }
-#closeSignin:hover {
+.closeSignin:hover {
     background-color: rgb(255, 123, 123);
     color: white;
+}
+
+#searchField {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
 }
 
 #forgotPwd {
@@ -141,11 +149,6 @@ header {
     font-size: 14px;
     display: none;
     text-align: center;
-}
-
-#loginGoogle {
-    text-align: center;
-    font-weight: bold;
 }
 
 input {
@@ -168,7 +171,6 @@ main {
 }
 aside {
     width: 120px;
-    /* width: 480px; */
     height: 100%;
     background-color: rgb(83, 83, 83);
     display: flex;
@@ -191,7 +193,6 @@ aside button:hover {
 
 #profileField {
     display: none;
-    /* display: flex; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -218,121 +219,138 @@ aside button:hover {
 #profileTop a {
     text-decoration: none;
     font-size: 12px;
-    font-weight: bold;
     color: white;
     background-color: #20B2AA;
     padding: 2px 4px;
     border-radius: 4px;
 }
-
-#profileTop div a{
+#profileTop a:hover {
+    opacity: 0.8;
+}
+#profileTop div a {
     background-color: transparent;
-    color: #20B2AA;
-    cursor: auto;
-}
-#profileTop div img {
-    cursor: pointer;
+    font-weight: bold;
+    color: black;
 }
 
-#profileTopImgHidden {
-    position: absolute;
+#profileTopHidden {
     display: none;
     flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    gap: 10px;
-    border: 1px solid gray;
-    padding: 20px 10px;
-    border-radius: 4px;
-    left: 60px;
-    box-shadow: 0 0 10px;
-    background-color: #444444;
     width: 400px;
+    padding: 20px 10px;
+    position: absolute;
+    left: 60px;
+    background-color: #333333;
+    border-radius: 4px;
+    box-shadow: 0 0 10px gray;
+    gap: 15px;
+}
+#profileTopHidden h6 {
+    color: #DCDCDC;
 }
 
-#img3:hover #profileTopImgHidden {
+#profileTopHidden-A {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 6px;
+    border-bottom: 1px solid gray;
+}
+#profileTopHidden-A div {
     display: flex;
 }
-
-#profileTopImgHiddenTop {
+#profileTopHidden-A label {
+    color: #DCDCDC;
+}
+#profileTopHidden i {
+    margin: auto 0;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+#profileTopHidden-B {
     display: flex;
-    gap: 4px;
-    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+#profileTopHidden-B span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #DCDCDC;
+}
+
+#profileTopHidden-C {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    padding: 2px 4px;
+    cursor: pointer;
+}
+#profileTopHidden-C:hover {
+    background-color: #8a8a8a;
+}
+
+#profileTopHidden-C div {
+    display: flex;
     justify-content: start;
     align-items: center;
+    gap: 4px;
 }
-
-#profileTopImgHiddenTop input {
-    width: 15px;
-}
-#profileTopImgHiddenTop label {
-    font-size: 14px;
-    color: #FEFEFE;
-}
-#profileTopImgHidden h6 {
-    color: #FEFEFE;
-    width: 100%;
-    margin-top: 15px;
-}
-
-#columnContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top: 15px;
-}
-#columnContainer span {
-    color: #FEFEFE;
-    font-size: 11px;
-}
-#userInfo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 4px;
-}
-#userInfo:hover {
-    background-color: #00774d;
-}
-#userInfoLeft img {
-    border-radius: 50%;
+#profileTopHidden-C div img {
     width: 40px;
     height: 40px;
 }
-
-#userInfo div a {
-    cursor: pointer;
-    color: #74A02A;
+#profileTopHidden-C div a {
+    color: #5FA02A;
+    background-color: transparent;
+    font-weight: bold;
 }
-#userInfo div a:hover {
+#profileTopHidden-C div a::after {
+    content: "-";
+    color: #DCDCDC;
+}
+#profileTopHidden-C div a:hover {
     color: red;
 }
-
-#userInfoLeft span {
+#profileTopHidden-C div span {
     font-size: 12px;
     font-weight: bold;
-    color: #FEFEFE;
 }
-#userInfo div + span{
-    color: #FEFEFE;
+#profileTopHidden-C span {
     font-size: 12px;
+    color: #DCDCDC;
 }
-#profileTopBottom {
-    width: 100%;
+#profileTopHidden-D {
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
-
-#profileTopBottom span {
-    color: #FEFEFE;
+#profileTopHidden-D span {
+    color: #DCDCDC;
+    font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
 }
-#profileTopBottom span:hover {
+#profileTopHidden-D span:first-child::after {
+    content: "|";
+    margin: 0 4px;
+    color: #DCDCDC;
+    cursor: auto;
+}
+#profileTopHidden-D span:hover {
     color: red;
 }
-#profileTopBottom span:first-child:after {
-    content: " |";
-    color: white;
+
+#checkbox {
+    width: 20px;
+    height: 20px;
+}
+#profileTopHidden label {
+    display: flex;
+    gap: 4px;
+    font-size: 12px;
+    margin: 0 8px;
 }
 
 
