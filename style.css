@@ -180,7 +180,7 @@ input[type="search"] {
 main {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     width: 100%;
     height: 100vh;
 }
@@ -437,9 +437,13 @@ textarea {
 
 
 section {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
     width: 100%;
-    height: 100vh;
-    background-color: #333333;
+    background-color: #8a8a8a;
+    position: relative;
 }
 
 #chatholder {
@@ -470,11 +474,10 @@ section {
     z-index: 1;
 }
 
-/* #tagContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
+#tags {
+    position: sticky;
+    top: 0;
+}
 
 #tags li {
     list-style: none;
@@ -491,6 +494,14 @@ section {
 #tags li a:hover {
     background-color: #20B2AA;
     color: #333333;
+}
+
+article {
+    width: 90%;
+    height: 50vh;
+    /* background-color: #20B2AA; */
+    text-align: center;
+    border: 1px solid gray;
 }
 
 #collabField {
