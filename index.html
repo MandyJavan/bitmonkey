@@ -11,14 +11,14 @@
 </head>
 <body class="bg-dark">
     <header>
-        <div id="cookiesCondition" class="w-100 d-flex gap-2 justify-content-center align-items-center">
+        <!-- <div id="cookiesCondition" class="w-100 d-flex gap-2 justify-content-center align-items-center">
             <p>BitMonky Uses Tracking Cookies for session managment... To Agree And Continue Click</p>
                 <div class="d-flex gap-2">
                     <button id="accept" type="button">Accept</button>
                     <p>If not</p>
                     <button id="leaveSite" type="button">Leave Site</button>
                 </div>
-        </div>
+        </div> -->
         <div id="mainHeader" class="d-flex bg-dark justify-content-between w-100 bg-danger p-2">
             <div id="mainHeaderLeft" class="d-flex justify-content-center align-items-center">
                 <img src="https://image.bitmonky.com/img/bitGoldCoin.webp" width="80" height="80" alt="bitmonkey picture">
@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div id="searchField">
-                <input type="search" name="search" placeholder="search">
+                <input type="search" name="search" placeholder="Ask The Site Monkey AI">
                 <button type="button">Search</button>
             </div>
             <div id="mainHeaderRight" class=" d-flex justify-content-center align-items-center">
@@ -112,11 +112,21 @@
                     <span>Language: all</span>
                 </div>
             </div>
-        </aside>
-        <section>
-            <div id="profileHeader">
+            <button id="collabBtn" type="button">Collabs ></button>
+            <div id="collabField" class="d-none">
 
             </div>
+        </aside>
+        <section class="d-flex column justify-content-center align-items-start">
+                <ul id="tags" class="d-flex justify-content-evenly align-items-center w-100 bg-dark p-3">
+                    <li><a href="#">Chat</a></li>
+                    <li><a href="#">Story</a></li>
+                    <li><a href="#">Music</a></li>
+                    <li><a href="#">New Things</a></li>
+                    <li><a href="#">Entertainment</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
         </section>
     </main>
     
